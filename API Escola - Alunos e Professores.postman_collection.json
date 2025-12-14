@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "e212054b-1527-4027-807a-4bce960fc38b",
+		"name": "API Escola - Alunos e Professores",
+		"description": "Coleção para testar os endpoints RESTful de Alunos e Professores.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33699327",
+		"_collection_link": "https://devlegal-4270.postman.co/workspace/Gustavo_LEGAL~bffb75a8-79dc-4b08-8c41-cf0b28402c79/collection/33699327-e212054b-1527-4027-807a-4bce960fc38b?action=share&source=collection_link&creator=33699327"
+	},
+	"item": [
+		{
+			"name": "Alunos",
+			"item": [
+				{
+					"name": "Listar Todos os Alunos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/alunos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Aluno por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/alunos/{{aluno_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"alunos",
+								"{{aluno_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Aluno por CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/alunos/cpf/{{aluno_cpf}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"alunos",
+								"cpf",
+								"{{aluno_cpf}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Aluno por Matrícula",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/alunos/matricula/{{aluno_matricula}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"alunos",
+								"matricula",
+								"{{aluno_matricula}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Novo Aluno",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Maria Silva\",\n  \"cpf\": \"123.456.789-01\",\n  \"email\": \"maria.silva@example.com\",\n  \"telefone\": \"(11) 98765-4321\",\n  \"endereco\": {\n    \"logradouro\": \"Rua Exemplo\",\n    \"numero\": \"123\",\n    \"bairro\": \"Centro\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"SP\",\n    \"cep\": \"01001-000\"\n  },\n  \"matricula\": \"MAT2025001\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/alunos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Aluno",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Maria Silva Atualizada\",\n  \"cpf\": \"123.456.789-01\",\n  \"email\": \"maria.silva.nova@example.com\",\n  \"telefone\": \"(11) 98765-4322\",\n  \"endereco\": {\n    \"logradouro\": \"Rua Exemplo\",\n    \"numero\": \"123\",\n    \"bairro\": \"Centro\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"SP\",\n    \"cep\": \"01001-000\"\n  },\n  \"matricula\": \"MAT2025001\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/alunos/{{aluno_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"alunos",
+								"{{aluno_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Aluno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/alunos/{{aluno_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"alunos",
+								"{{aluno_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Professores",
+			"item": [
+				{
+					"name": "Listar Todos os Professores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/professores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Professor por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/professores/{{professor_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"professores",
+								"{{professor_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Professor por CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/professores/cpf/{{professor_cpf}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"professores",
+								"cpf",
+								"{{professor_cpf}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Professores por Departamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/professores/departamento/{{departamento}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"professores",
+								"departamento",
+								"{{departamento}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Novo Professor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"João Oliveira\",\n  \"cpf\": \"987.654.321-00\",\n  \"email\": \"joao.oliveira@example.com\",\n  \"telefone\": \"(21) 91234-5678\",\n  \"endereco\": {\n    \"logradouro\": \"Avenida Exemplo\",\n    \"numero\": \"456\",\n    \"bairro\": \"Copacabana\",\n    \"cidade\": \"Rio de Janeiro\",\n    \"estado\": \"RJ\",\n    \"cep\": \"22010-000\"\n  },\n  \"departamento\": \"Matemática\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/professores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Professor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"João Oliveira Atualizado\",\n  \"cpf\": \"987.654.321-00\",\n  \"email\": \"joao.oliveira.novo@example.com\",\n  \"telefone\": \"(21) 91234-5679\",\n  \"endereco\": {\n    \"logradouro\": \"Avenida Exemplo\",\n    \"numero\": \"456\",\n    \"bairro\": \"Copacabana\",\n    \"cidade\": \"Rio de Janeiro\",\n    \"estado\": \"RJ\",\n    \"cep\": \"22010-000\"\n  },\n  \"departamento\": \"Física\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/professores/{{professor_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"professores",
+								"{{professor_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Professor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/professores/{{professor_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"professores",
+								"{{professor_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "aluno_id",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "professor_id",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "aluno_cpf",
+			"value": "123.456.789-01",
+			"type": "string"
+		},
+		{
+			"key": "aluno_matricula",
+			"value": "MAT2025001",
+			"type": "string"
+		},
+		{
+			"key": "professor_cpf",
+			"value": "987.654.321-00",
+			"type": "string"
+		},
+		{
+			"key": "departamento",
+			"value": "Matemática",
+			"type": "string"
+		}
+	]
+}
